@@ -11,8 +11,6 @@ import { Storage } from '@ionic/storage'
 })
 export class AboutPage {
   public attendanceList=[
-          {date:"25/5/2015",late:30,grade:10},
-          {date:"26/4/2015",late:10,grade:5}
           ];
   constructor(private storage:Storage ,public user:User ,public navCtrl: NavController) {
     this.storage.ready().then(()=>{

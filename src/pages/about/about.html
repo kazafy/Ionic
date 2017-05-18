@@ -13,6 +13,9 @@
         <ion-label text-center >{{item.late}}</ion-label>
         <ion-label text-center >{{item.grade}}</ion-label>
   </ion-item>
+  <ion-label *ngIf="!attendanceList">
+    congratulations you don't waste any grads 
+  </ion-label>
   </ion-list>
   </ion-card>
 </ion-content>
