@@ -1,0 +1,18 @@
+<ion-menu [content]="mycontent">
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <button (click)="logout()" ion-button  full >Log Out</button>
+      </ion-item>    
+      </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="{{student.username}}" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Grades" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Leave" tabIcon="contacts"></ion-tab>
+</ion-tabs>

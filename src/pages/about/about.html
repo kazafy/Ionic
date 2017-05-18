@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      About
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+  <ion-list>
+  <ion-item *ngFor="let item of attendanceList">
+        <ion-label text-center >{{item.date}}</ion-label>
+        <ion-label text-center >{{item.late}}</ion-label>
+        <ion-label text-center >{{item.grade}}</ion-label>
+  </ion-item>
+  </ion-list>
+  </ion-card>
+</ion-content>

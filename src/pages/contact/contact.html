@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+    <ion-list inset>
+      <ion-item>
+        <button (click)="showDatePicker('date')" ion-button>
+          {{selectedDate.getFullYear()+"/"+selectedDate.getMonth()+"/"+selectedDate.getDay()}}
+        </button>
+      </ion-item>
+        <ion-list radio-group [(ngModel)]="requestType">
+          <ion-item>
+            <ion-label>Absent</ion-label>
+            <ion-radio (click)="test()"  checked="true" value="absent"></ion-radio>
+          </ion-item>          
+          <ion-item>
+            <ion-label>Late</ion-label>
+            <ion-radio (click)="test()"   value="late"></ion-radio>
+          </ion-item>
+          <ion-item *ngIf="showOnLate">
+            <ion-label>Late in Hours:</ion-label>
+            <ion-input [(ngModel)]="hoursLate" type="number"></ion-input>
+                <!--<button (click)="showDatePicker('time')" ion-button>
+                  {{selectedDate.getHours()+":"+selectedDate.getMinutes()}}
+                </button>-->
+          </ion-item>
+        </ion-list>
+      <ion-item>
+        <ion-textarea name="comment" [(ngModel)]="requestBody" placeholder="Put any comment..."></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <button (click)="sendRequest()" ion-button full icon-left>
+          Send Request
+        </button>
+      </ion-item>
+
+    </ion-list>
+
+  </ion-card>
+
+</ion-content>
